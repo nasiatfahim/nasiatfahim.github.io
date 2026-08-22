@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projects — Md Nasiat Hasan Fahim</title>
+<meta name="description" content="Engineering projects: multimodal retrieval systems, computer vision pipelines and production backends.">
+<link rel="canonical" href="https://nasiatfahim.github.io/projects.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Projects — Md Nasiat Hasan Fahim">
+<meta property="og:description" content="Engineering systems: multimodal retrieval, computer-vision pipelines and production backends.">
+<meta property="og:url" content="https://nasiatfahim.github.io/projects.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://nasiatfahim.github.io/assets/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;450;500;600&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%230B6357%27/%3E%3Cpath d=%27M4 16h5l3-9 4 18 4-13 3 4h5%27 fill=%27none%27 stroke=%27%23F0F2F0%27 stroke-width=%272%27 stroke-linejoin=%27round%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
+<meta name="theme-color" content="#F0F2F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1214" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html">Nasiat&nbsp;Fahim</a>
+    <nav class="nav" aria-label="Main">
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="cv.html">CV</a>
+      <a class="pdf" href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf">PDF&nbsp;&darr;</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero" style="padding-bottom:clamp(20px,3vw,32px)">
+  <div class="wrap">
+    <p class="mono" style="color:var(--signal);margin-bottom:16px">Projects</p>
+    <h1 style="font-size:clamp(2.1rem,5vw,3.6rem);margin-bottom:.4em">Systems I have built</h1>
+    <p class="lede" style="max-width:44ch">Research shows I can ask a question. These show I can ship the thing that answers it.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="prose" style="max-width:70ch">
+      <p class="first">Research code and production code fail differently, and I think a researcher who has written both is better at each. These are engineering projects &mdash; built to run, be deployed and be handed to someone else &mdash; kept deliberately separate from the research pages.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><div><p class="mono">Engineering</p><h2 class="h2">Selected projects</h2></div></div>
+
+    <article class="entry">
+      <div class="gutter"><p class="mono status">Personal</p><p class="mono dim">Full-stack</p></div>
+      <div>
+        <h3>Multimodal AI search &amp; recommendation engine</h3>
+        <p class="question">Can a shopper find a product by describing it and showing a photograph of something similar, in the same query?</p>
+        <p>A full-stack e-commerce platform built around a hybrid retrieval microservice. OpenAI Vision produces embeddings for product imagery, ChromaDB serves nearest-neighbour search over combined text and image vectors, and a PostgreSQL-to-vector synchronisation pipeline keeps the index consistent with the catalogue as it changes &mdash; which is the part that is actually hard. Redis caches hot queries; the whole thing is containerised with Docker.</p>
+        <div class="tags"><span>FastAPI</span><span>OpenAI Vision</span><span>ChromaDB</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span></div>
+        <div class="actions"><a href="https://github.com/nasiatfahim">GitHub &rarr;</a></div>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="gutter"><p class="mono status">Personal</p><p class="mono dim">Computer vision</p></div>
+      <div>
+        <h3>COWTRAIN &mdash; cattle weight estimation from photographs</h3>
+        <p class="question">Livestock is priced by weight, and a scale is expensive. Can a phone photograph do the job?</p>
+        <p>An end-to-end pipeline: YOLOv8 instance segmentation isolates the animal and a reference object of known size in the same frame, the pixel-to-metric scale is recovered from the reference, and a regression model maps the resulting morphometry to weight. Served behind a FastAPI backend. The reference-object trick is what makes it work from an uncalibrated camera at an unknown distance.</p>
+        <div class="tags"><span>YOLOv8</span><span>Instance segmentation</span><span>Regression</span><span>FastAPI</span></div>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="gutter"><p class="mono status">Professional</p><p class="mono dim">BRAC<br>2025</p></div>
+      <div>
+        <h3>Gamified social platform for BRAC</h3>
+        <p>Backend engineering during the BRAC Tech &amp; SELP-RHRN AI fellowship, on a platform addressing gender-discrimination attitudes. I built the FastAPI backend, multi-LLM pipelines over GPT&#8209;4o and Gemini serving real-time Bengali content &mdash; book and research-paper search with suggestions &mdash; and PostgreSQL JSONB schemas for semi-structured content, deployed as containerised microservices. Working Bengali-language LLM systems at NGO scale is a different problem from working English ones at demo scale.</p>
+        <div class="tags"><span>FastAPI</span><span>GPT-4o</span><span>Gemini</span><span>PostgreSQL JSONB</span><span>Docker</span><span>Bengali NLP</span></div>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="gutter"><p class="mono status">Champion</p><p class="mono dim">Oxfam<br>hackathon</p></div>
+      <div>
+        <h3>Real-time climate-reporting pipeline</h3>
+        <p>Winning entry at the AI Meets Climate hackathon: an ASR and NER pipeline turning spoken field reports into structured climate-incident records. Built and demonstrated inside the contest window.</p>
+        <div class="tags"><span>ASR</span><span>Named entity recognition</span><span>Pipeline</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <p class="mono" style="color:var(--signal);margin-bottom:14px">Contact</p>
+      <p class="big">Open to lecturer positions, PhD and MSc supervision enquiries, and research collaboration.<br>
+      <a href="mailto:nhfahim18@gmail.com">nhfahim18@gmail.com</a></p>
+    </div>
+    <div class="mono meta">
+      <a href="https://github.com/nasiatfahim">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/md-nasiat-hasan-fahim-2a3005289">LinkedIn</a><br>
+      <a href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf">CV (PDF)</a><br>
+      <span style="color:var(--ink-3)">Sylhet, Bangladesh</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

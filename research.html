@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Research — Md Nasiat Hasan Fahim</title>
+<meta name="description" content="Protein language models, Sentinel-1 SAR segmentation and earthquake early warning.">
+<link rel="canonical" href="https://nasiatfahim.github.io/research.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Research — Md Nasiat Hasan Fahim">
+<meta property="og:description" content="Three research themes framed as questions: scientific foundation models, geospatial AI, and earthquake early warning.">
+<meta property="og:url" content="https://nasiatfahim.github.io/research.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://nasiatfahim.github.io/assets/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;450;500;600&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%230B6357%27/%3E%3Cpath d=%27M4 16h5l3-9 4 18 4-13 3 4h5%27 fill=%27none%27 stroke=%27%23F0F2F0%27 stroke-width=%272%27 stroke-linejoin=%27round%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
+<meta name="theme-color" content="#F0F2F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1214" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html">Nasiat&nbsp;Fahim</a>
+    <nav class="nav" aria-label="Main">
+      <a href="research.html" aria-current="page">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="projects.html">Projects</a>
+      <a href="cv.html">CV</a>
+      <a class="pdf" href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf">PDF&nbsp;&darr;</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero" style="padding-bottom:clamp(20px,3vw,32px)">
+  <div class="wrap">
+    <p class="mono" style="color:var(--signal);margin-bottom:16px">Research</p>
+    <h1 style="font-size:clamp(2.1rem,5vw,3.6rem);margin-bottom:.4em">What breaks when a model leaves home</h1>
+    <p class="lede" style="max-width:44ch">Every project below is a version of the same question, asked in a different science.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="prose" style="max-width:70ch">
+      <p class="first">Machine-learning results are usually reported on data that resembles the data the model was trained on. The systems I care about do not get that luxury. A flood map has to work over a delta the model has never seen. An early-warning model has to fire on a fault it was not trained on. A protein language model trained on all of life has to say something useful about an organism living in a hot spring.</p>
+      <p>So my work concentrates on three things: <strong>heterogeneity</strong> in the training distribution, <strong>generalisation</strong> across the boundary the deployment actually crosses, and <strong>interpretability</strong> good enough that a domain scientist can check whether the model learned physics or learned an artefact. Explainable AI appears in all three projects not as a add-on but because in each case the failure I am hunting is invisible in the aggregate metric.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><div><p class="mono">Theme 01</p><h2 class="h2">Scientific foundation models</h2></div></div>
+    <article class="entry" id="plm">
+      <div class="gutter"><p class="mono status">Ongoing</p><p class="mono dim">Manuscript<br>under review</p></div>
+      <div>
+        <h3>De-averaging protein language models</h3>
+        <p class="question">A protein language model is trained across all of life at once. What does it lose by averaging over organisms that live at 4&nbsp;&deg;C and at 95&nbsp;&deg;C alike?</p>
+        <p>Foundation models over protein sequence are trained on databases that mix every lifestyle, every niche and every thermal regime into a single distribution. The resulting model is a good <em>average</em> translator of protein space, and for that reason a poor model of adaptation &mdash; the very thing that makes extremophile biology interesting.</p>
+        <p>I am adapting <strong>ProGen2</strong> toward thermophile-associated sequence space using LoRA-based supervised fine-tuning alongside two preference-optimisation objectives, DPO and KTO, under matched compute budgets and homology-controlled evaluation splits so that improvements cannot be explained by memorised near-duplicates. The comparison surfaces a distinct likelihood&ndash;preference trade-off: the objectives disagree about what a good thermophile sequence is, and the disagreement is informative. Attribution methods are then used to read back which biophysical signatures &mdash; residue composition, charge, salt-bridge propensity &mdash; the adapted model has actually internalised.</p>
+        <div class="tags"><span>ProGen2</span><span>LoRA / PEFT</span><span>DPO</span><span>KTO</span><span>Homology-controlled eval</span><span>XAI</span></div>
+        <div class="actions"><a href="publications.html#progen">Manuscript &rarr;</a></div>
+      </div>
+    </article>
+    <article class="entry">
+      <div class="gutter"><p class="mono status">Published</p><p class="mono dim">IEEE QPAIN<br>2026</p></div>
+      <div>
+        <h3>Protein-based species identification</h3>
+        <p>An earlier, more applied piece of the same thread: can protein sequence alone identify a species, cheaply enough to run without a GPU? I curated 2,845 sequences across nine native Bangladeshi fish species and benchmarked seven architectures. The winning model was not the largest &mdash; a motif-aware CNN&ndash;Transformer hybrid beat ProtBERT while running 5&times; faster at 1/42 the size. Deployability in a low-resource setting was the point, not the leaderboard.</p>
+        <div class="actions"><a href="https://doi.org/10.1109/QPAIN69676.2026.11546620">DOI</a><a href="publications.html#fish">Details</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><div><p class="mono">Theme 02</p><h2 class="h2">Geospatial &amp; Earth AI</h2></div></div>
+    <article class="entry" id="sar">
+      <div class="gutter"><p class="mono status">Ongoing</p><p class="mono dim">2025 &ndash;</p></div>
+      <div>
+        <h3>Cross-regional water segmentation from Sentinel-1</h3>
+        <p class="question">Sentinel&#8209;1 flood-mapping models are almost always validated in the biome they were trained in. How far can one travel before it fails, and can you tell from the inside that it has?</p>
+        <p>Synthetic aperture radar sees through cloud, which is exactly why it is the sensor of choice for flood response &mdash; and exactly why its failures are hard to catch, since there is often no optical image to check against. Backscatter over water depends on wind roughening, incidence angle, vegetation and terrain, all of which vary by region. A model trained on one delta can be confidently wrong over another.</p>
+        <p>I train cross-regional segmentation models and then attack them deliberately: quantifying <strong>geographic and biome bias</strong>, backscatter variability, speckle noise, and radar shadow and layover artefacts, and using explainability to characterise the conditions under which a prediction should not be trusted. For an operational flood map, a calibrated statement about where the model is unreliable is worth more than a higher mean IoU.</p>
+        <div class="tags"><span>Sentinel-1</span><span>Semantic segmentation</span><span>Domain shift</span><span>Speckle &amp; shadow</span><span>GeoAI</span><span>XAI</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><div><p class="mono">Theme 03</p><h2 class="h2">Earthquake early warning</h2></div></div>
+    <article class="entry" id="eew">
+      <div class="gutter"><p class="mono status">Ongoing</p><p class="mono dim">Published 2025<br>Extension in progress</p></div>
+      <div>
+        <h3>Globally generalisable warning from initial P-waves</h3>
+        <p class="question">An early-warning system must commit to an answer from a fragment of one waveform at one station. What is genuinely recoverable from that fragment, and what falls apart when the fault moves?</p>
+        <p>The P-wave arrives before the damaging S-wave, and the gap between them is the entire warning budget &mdash; seconds, sometimes less. Everything a system can say has to be extracted from that opening fragment, at one station, before enough of the network has reported to be confident.</p>
+        <p>My published work curated <strong>7,318 South Asian events</strong> &mdash; a region with no comparable public benchmark &mdash; and compared six architectures on seven-second single-station windows. The current extension moves from classification toward linking waveform character to <strong>shaking intensity, radiated energy and source properties</strong>, tests cross-region transfer explicitly, and uses attribution to verify that the model is responding to physics rather than to station or instrument signatures. The efficiency constraint is not incidental: an inference that takes longer than the warning window is not a warning.</p>
+        <div class="tags"><span>Seismology</span><span>Transformers</span><span>Cross-region transfer</span><span>Real-time inference</span><span>XAI</span></div>
+        <div class="actions"><a href="https://doi.org/10.1109/ICCIT68739.2025.11489542">DOI</a><a href="publications.html#eew">Details</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><div><p class="mono">Earlier work</p><h2 class="h2">Computational social science</h2></div></div>
+    <article class="entry">
+      <div class="gutter"><p class="mono dim">2025 &ndash; 2026</p><p class="mono dim">Under review</p></div>
+      <div>
+        <h3>Spatiotemporal crime dynamics in urban Bangladesh</h3>
+        <p>Research assistantship under <strong>Prof. Dr. Ahsan Habib</strong> at SUST. I combined newspaper reporting with police records to study crime in Sylhet, using K-means clustering to find temporal hotspots, time-series forecasting for trend prediction, and recidivism analysis. I also built 3D visualisation tools for mapping clusters and victim&ndash;offender relationships. The work taught me most of what I know about messy, partially observed, socially consequential data &mdash; which is a large part of why the rest of my research is about knowing when not to trust a model.</p>
+        <div class="actions"><a href="publications.html#crime">Manuscript &rarr;</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><div><p class="mono">Next</p><h2 class="h2">Where I want to take this</h2></div></div>
+    <div class="prose">
+      <p class="first">For doctoral work I want to stop treating generalisation failure as a nuisance and start treating it as the measurement. The three projects here each stumbled onto the same gap: a model that scores well in aggregate while being unreliable in a specific, identifiable, and often predictable region of its input space.</p>
+      <p>I would like to work on methods that make that region explicit &mdash; that report not only a prediction but the conditions under which it should be believed &mdash; and to keep testing them on sciences where being wrong has a cost outside the benchmark. Sequence biology, Earth observation and seismology are all good testbeds for that, because in all three the ground truth is physical and someone eventually has to act on the output.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <p class="mono" style="color:var(--signal);margin-bottom:14px">Contact</p>
+      <p class="big">Open to lecturer positions, PhD and MSc supervision enquiries, and research collaboration.<br>
+      <a href="mailto:nhfahim18@gmail.com">nhfahim18@gmail.com</a></p>
+    </div>
+    <div class="mono meta">
+      <a href="https://github.com/nasiatfahim">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/md-nasiat-hasan-fahim-2a3005289">LinkedIn</a><br>
+      <a href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf">CV (PDF)</a><br>
+      <span style="color:var(--ink-3)">Sylhet, Bangladesh</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
