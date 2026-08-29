@@ -6,14 +6,17 @@
 <title>Md Nasiat Hasan Fahim — Computer Science Researcher</title>
 <meta name="description" content="Md Nasiat Hasan Fahim is a computer science researcher working on robust and explainable machine learning for scientific problems, including protein modelling, Earth observation, and earthquake early warning.">
 <meta name="author" content="Md Nasiat Hasan Fahim">
-<meta name="keywords" content="Machine Learning, Scientific Machine Learning, Explainable AI, Robust Generalisation, Foundation Models, Remote Sensing, Protein Language Models, Earthquake Early Warning">
 <link rel="canonical" href="https://nasiatfahim.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Md Nasiat Hasan Fahim — Computer Science Researcher">
 <meta property="og:description" content="Robust and explainable machine learning for scientific problems.">
 <meta property="og:url" content="https://nasiatfahim.github.io/">
 <meta property="og:image" content="https://nasiatfahim.github.io/assets/og.png">
+<meta property="og:site_name" content="Md Nasiat Hasan Fahim">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Md Nasiat Hasan Fahim — Computer Science Researcher">
+<meta name="twitter:description" content="Robust and explainable machine learning for scientific problems.">
+<meta name="twitter:image" content="https://nasiatfahim.github.io/assets/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;450;500;600&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
@@ -24,30 +27,70 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Md Nasiat Hasan Fahim",
-  "url": "https://nasiatfahim.github.io/",
-  "image": "https://nasiatfahim.github.io/assets/portrait.jpg",
-  "jobTitle": "Computer Science Researcher",
-  "email": "mailto:nasiat.cse.sust@gmail.com",
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "Shahjalal University of Science and Technology"
-  },
-  "knowsAbout": [
-    "Machine Learning",
-    "Scientific Machine Learning",
-    "Explainable AI",
-    "Robust Generalisation",
-    "Foundation Models",
-    "Remote Sensing",
-    "Protein Language Models",
-    "Earthquake Early Warning"
-  ],
-  "sameAs": [
-    "https://github.com/nasiatfahim",
-    "https://www.linkedin.com/in/nasiat-fahim",
-    "https://www.kaggle.com/nasiatfahim"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://nasiatfahim.github.io/#website",
+      "url": "https://nasiatfahim.github.io/",
+      "name": "Md Nasiat Hasan Fahim",
+      "alternateName": [
+        "Nasiat Fahim",
+        "nasiatfahim.github.io"
+      ]
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://nasiatfahim.github.io/#profile",
+      "url": "https://nasiatfahim.github.io/",
+      "name": "Md Nasiat Hasan Fahim — Academic Profile",
+      "isPartOf": {
+        "@id": "https://nasiatfahim.github.io/#website"
+      },
+      "mainEntity": {
+        "@id": "https://nasiatfahim.github.io/#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://nasiatfahim.github.io/#person",
+      "name": "Md Nasiat Hasan Fahim",
+      "alternateName": [
+        "Md. Nasiat Hasan Fahim",
+        "Nasiat Hasan Fahim",
+        "Nasiat Fahim"
+      ],
+      "url": "https://nasiatfahim.github.io/",
+      "image": "https://nasiatfahim.github.io/assets/portrait.jpg",
+      "email": "mailto:nasiat.cse.sust@gmail.com",
+      "jobTitle": "Computer Science Researcher",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Shahjalal University of Science and Technology",
+        "alternateName": "SUST"
+      },
+      "knowsAbout": [
+        "Machine Learning",
+        "Scientific Machine Learning",
+        "Explainable Artificial Intelligence",
+        "Robust Generalisation",
+        "Foundation Models",
+        "Remote Sensing",
+        "Protein Language Models",
+        "Earthquake Early Warning"
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0009-0007-4259-212X"
+      },
+      "sameAs": [
+        "https://scholar.google.com/citations?user=66ZlI5MAAAAJ",
+        "https://orcid.org/0009-0007-4259-212X",
+        "https://github.com/nasiatfahim",
+        "https://www.linkedin.com/in/nasiat-fahim",
+        "https://www.kaggle.com/nasiatfahim"
+      ]
+    }
   ]
 }
 </script>
@@ -67,7 +110,7 @@
       <a href="teaching.html">Teaching</a>
       <a href="projects.html">Projects</a>
       <a href="cv.html">CV</a>
-      <a class="pdf desktop-pdf" href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf" download>PDF&nbsp;&darr;</a>
+      <a class="pdf desktop-pdf" href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf" download aria-label="Download Md Nasiat Hasan Fahim CV as PDF">PDF&nbsp;&darr;</a>
     </nav>
   </div>
 </header>
@@ -88,14 +131,16 @@
           <a href="cv.html">CV &rarr;</a>
         </div>
         <div class="links secondary-links" aria-label="External profiles and contact">
-          <a href="https://github.com/nasiatfahim">GitHub</a>
-          <a href="https://www.linkedin.com/in/nasiat-fahim">LinkedIn</a>
-          <a href="https://www.kaggle.com/nasiatfahim">Kaggle</a>
+          <a rel="me" href="https://scholar.google.com/citations?user=66ZlI5MAAAAJ">Google Scholar</a>
+          <a rel="me" href="https://orcid.org/0009-0007-4259-212X">ORCID</a>
+          <a rel="me" href="https://github.com/nasiatfahim">GitHub</a>
+          <a rel="me" href="https://www.linkedin.com/in/nasiat-fahim">LinkedIn</a>
+          <a rel="me" href="https://www.kaggle.com/nasiatfahim">Kaggle</a>
           <a href="mailto:nasiat.cse.sust@gmail.com">Email</a>
         </div>
       </div>
       <aside class="profile-panel" aria-label="Academic summary">
-        <img class="portrait" src="assets/portrait.jpg" alt="Portrait of Md Nasiat Hasan Fahim">
+        <img class="portrait" src="assets/portrait.jpg" alt="Portrait of Md Nasiat Hasan Fahim" width="800" height="1000" decoding="async" fetchpriority="high">
         <dl class="profile-facts">
           <div><dt>Degree</dt><dd>B.Sc. Eng. in Computer Science &amp; Engineering</dd></div>
           <div><dt>University</dt><dd>Shahjalal University of Science &amp; Technology</dd></div>
@@ -209,9 +254,11 @@
       <a href="mailto:nasiat.cse.sust@gmail.com">nasiat.cse.sust@gmail.com</a>
     </div>
     <div class="mono meta">
-      <a href="https://github.com/nasiatfahim">GitHub</a><br>
-      <a href="https://www.linkedin.com/in/nasiat-fahim">LinkedIn</a><br>
-      <a href="https://www.kaggle.com/nasiatfahim">Kaggle</a><br>
+      <a rel="me" href="https://scholar.google.com/citations?user=66ZlI5MAAAAJ">Google Scholar</a><br>
+      <a rel="me" href="https://orcid.org/0009-0007-4259-212X">ORCID</a><br>
+      <a rel="me" href="https://github.com/nasiatfahim">GitHub</a><br>
+      <a rel="me" href="https://www.linkedin.com/in/nasiat-fahim">LinkedIn</a><br>
+      <a rel="me" href="https://www.kaggle.com/nasiatfahim">Kaggle</a><br>
       <a href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf" download>CV PDF</a><br>
       <span>Sylhet, Bangladesh</span>
     </div>
