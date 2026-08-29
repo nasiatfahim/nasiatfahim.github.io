@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Publications — Md Nasiat Hasan Fahim</title>
-<meta name="description" content="Peer-reviewed publications and manuscripts under review by Md Nasiat Hasan Fahim.">
+<meta name="description" content="Peer-reviewed publications and submitted manuscripts by Md Nasiat Hasan Fahim.">
 <link rel="canonical" href="https://nasiatfahim.github.io/publications.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Publications — Md Nasiat Hasan Fahim">
-<meta property="og:description" content="Peer-reviewed publications and manuscripts under review, each with contribution and result summarised.">
+<meta property="og:description" content="Peer-reviewed publications and submitted manuscripts in scientific machine learning.">
 <meta property="og:url" content="https://nasiatfahim.github.io/publications.html">
-<meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://nasiatfahim.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;450;500;600&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
@@ -24,30 +24,33 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="masthead">
   <div class="wrap">
-    <a class="brand" href="index.html">Nasiat&nbsp;Fahim</a>
+    <div class="brand-row">
+      <a class="brand" href="index.html">Nasiat&nbsp;Fahim</a>
+      <a class="mobile-pdf" href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf" download>Download CV</a>
+    </div>
     <nav class="nav" aria-label="Main">
       <a href="research.html">Research</a>
       <a href="publications.html" aria-current="page">Publications</a>
       <a href="teaching.html">Teaching</a>
       <a href="projects.html">Projects</a>
       <a href="cv.html">CV</a>
-      <a class="pdf" href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf">PDF&nbsp;&darr;</a>
+      <a class="pdf desktop-pdf" href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf" download>PDF&nbsp;&darr;</a>
     </nav>
   </div>
 </header>
+
 <main id="main">
-<section class="hero" style="padding-bottom:clamp(20px,3vw,32px)">
+<section class="hero interior-hero">
   <div class="wrap">
-    <p class="mono" style="color:var(--signal);margin-bottom:16px">Publications</p>
-    <h1 style="font-size:clamp(2.1rem,5vw,3.6rem);margin-bottom:.4em">Publications</h1>
-    <p class="lede" style="max-width:44ch">Peer-reviewed work is listed first and kept strictly separate from manuscripts still under review.</p>
+    <p class="mono page-label">Publications</p>
+    <h1>Publications</h1>
+    <p class="lede">Peer-reviewed work is listed separately from manuscripts that have not yet completed peer review.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><div><p class="mono">Peer-reviewed</p><h2 class="h2">Published</h2></div>
-      <!-- ADD once you have a profile: <a href="https://scholar.google.com/citations?user=YOURID">Google Scholar &rarr;</a> --></div>
+    <div class="section-head"><div><p class="mono">Peer-reviewed publications</p><h2 class="h2">Published</h2></div></div>
 
     <article class="entry" id="fish">
       <div class="gutter"><p class="mono status">Published</p><p class="mono dim">IEEE QPAIN<br>2026</p></div>
@@ -55,11 +58,11 @@
         <h3>Protein-Based Fish Species Identification: Dataset, Models, and Insights from Native Bangladeshi Fish</h3>
         <p class="cite"><span class="me">N. H. Fahim</span>, A. U. Muhib and M. S. Rahman. <em>2026 IEEE 2nd International Conference on Quantum Photonics, Artificial Intelligence, and Networking (QPAIN)</em>, Chittagong, Bangladesh, 2026, pp. 1&ndash;6.</p>
         <dl class="finding">
-          <dt>Contribution</dt><dd>Built and released a dataset of 2,845 protein sequences spanning nine native Bangladeshi fish species, then benchmarked seven architectures on it &mdash; there was no existing benchmark for this task on regional species.</dd>
-          <dt>Result</dt><dd>A motif-aware CNN&ndash;Transformer with type-aware positional encoding reached 79.80% accuracy while running on CPU alone: 5&times; faster and 42&times; smaller than the ProtBERT baseline.</dd>
-          <dt>Why it matters</dt><dd>Species verification is a food-fraud and fisheries-management problem in settings where GPU inference is not available. Model size was a design constraint, not an afterthought.</dd>
+          <dt>Contribution</dt><dd>Curated a study dataset of 2,845 protein sequences spanning nine native Bangladeshi fish species and compared seven architectures under a shared evaluation.</dd>
+          <dt>Result</dt><dd>A motif-aware CNN-Transformer with type-aware positional encoding reached 79.80% accuracy with CPU-capable inference, running 5&times; faster and using a model 42&times; smaller than the ProtBERT baseline.</dd>
+          <dt>Why it matters</dt><dd>The work examines species identification in a resource-constrained setting where deployment cost is part of the research problem.</dd>
         </dl>
-        <div class="actions"><a href="https://doi.org/10.1109/QPAIN69676.2026.11546620">DOI: 10.1109/QPAIN69676.2026.11546620</a><!-- EDIT: add Code / Dataset / BibTeX links --></div>
+        <div class="actions"><a href="https://doi.org/10.1109/QPAIN69676.2026.11546620">DOI: 10.1109/QPAIN69676.2026.11546620</a></div>
       </div>
     </article>
 
@@ -69,11 +72,11 @@
         <h3>Real-Time Earthquake Magnitude Classification from Initial P-Waves: Models, Dataset, and Comparative Analysis for South Asia</h3>
         <p class="cite"><span class="me">M. N. Hasan Fahim</span>, M. A. Ullah Muhib, R. A. Tanvir and A. Al Noman. <em>2025 28th International Conference on Computer and Information Technology (ICCIT)</em>, Cox&rsquo;s Bazar, Bangladesh, 2025, pp. 5175&ndash;5180.</p>
         <dl class="finding">
-          <dt>Contribution</dt><dd>Curated 7,318 South Asian earthquake events into a benchmark for single-station early warning, then compared six model families on seven-second post-P-wave windows under identical conditions.</dd>
-          <dt>Result</dt><dd>The Transformer reached 76.23% accuracy and 81.56% adaptive accuracy at 4.8&nbsp;ms inference latency &mdash; comfortably inside the budget a real warning system has between detection and shaking.</dd>
-          <dt>Why it matters</dt><dd>South Asia is densely populated, seismically active and underrepresented in early-warning benchmarks. Models tuned on Japanese or Californian networks should not be assumed to transfer here, and this dataset makes that testable.</dd>
+          <dt>Contribution</dt><dd>Curated 7,318 South Asian earthquake events for single-station early-warning experiments and compared six model families using seven-second post-P-wave windows.</dd>
+          <dt>Result</dt><dd>The Transformer reached 76.23% accuracy, 81.56% adaptive accuracy, and 4.8 ms inference latency under the study protocol.</dd>
+          <dt>Why it matters</dt><dd>The study provides a controlled regional comparison for fast magnitude classification from limited initial waveform information.</dd>
         </dl>
-        <div class="actions"><a href="https://doi.org/10.1109/ICCIT68739.2025.11489542">DOI: 10.1109/ICCIT68739.2025.11489542</a><!-- EDIT: add Code / Dataset / BibTeX links --></div>
+        <div class="actions"><a href="https://doi.org/10.1109/ICCIT68739.2025.11489542">DOI: 10.1109/ICCIT68739.2025.11489542</a></div>
       </div>
     </article>
   </div>
@@ -81,47 +84,49 @@
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><div><p class="mono">Not yet peer-reviewed</p><h2 class="h2">Manuscripts under review</h2></div></div>
+    <div class="section-head"><div><p class="mono">Manuscripts</p><h2 class="h2">Submitted, not yet peer-reviewed</h2></div></div>
 
     <article class="entry" id="progen">
-      <div class="gutter"><p class="mono status">Submitted</p><p class="mono dim">CSBJ<br>2026</p></div>
+      <div class="gutter"><p class="mono status">Submitted</p><p class="mono dim">PLOS ONE<br>2026</p></div>
       <div>
         <h3>Parameter-Efficient Preference Optimization and Supervised Fine-Tuning of ProGen2 for Thermophile Sequence Space</h3>
-        <p class="cite"><span class="me">Md Nasiat Hasan Fahim</span>, Md. Abid Ullah Muhib and Mohammad Shahidur Rahman. Submitted to <em>Computational and Structural Biotechnology Journal</em>, 2026.</p>
+        <p class="cite"><span class="me">Md Nasiat Hasan Fahim</span>, Md. Abid Ullah Muhib and Mohammad Shahidur Rahman. Submitted to <em>PLOS ONE</em>, 2026.</p>
         <dl class="finding">
-          <dt>Contribution</dt><dd>Adapts ProGen2 toward thermophile-associated sequence space via LoRA-based SFT, DPO and KTO, evaluated under controlled compute and homology-controlled splits.</dd>
-          <dt>Finding</dt><dd>Likelihood and preference objectives pull in measurably different directions &mdash; a trade-off that is invisible if you report only one of them.</dd>
+          <dt>Contribution</dt><dd>Adapts ProGen2 toward thermophile-associated sequence space through LoRA-based supervised fine-tuning, DPO, and KTO under controlled compute and homology-controlled evaluation.</dd>
+          <dt>Finding</dt><dd>The experiments reveal distinct likelihood-preference trade-offs across the adaptation objectives.</dd>
         </dl>
       </div>
     </article>
 
     <article class="entry" id="crime">
-      <div class="gutter"><p class="mono status">Submitted</p><p class="mono dim">SUST J. Sci.<br>&amp; Tech. 2026</p></div>
+      <div class="gutter"><p class="mono status">Submitted</p><p class="mono dim">SUST Journal of<br>Science and Technology<br>2026</p></div>
       <div>
         <h3>Spatiotemporal Crime Dynamics and Recidivism Analysis in Urban Bangladesh: A Hybrid K-Means Approach</h3>
         <p class="cite">Ahsan Habib, Md. Mehedi Hasan, Rayhanul Amin Tanvir, Abu Sayeid Sawon, <span class="me">Md Nasiat Hasan Fahim</span> and Nixon Deb Antu. Submitted to <em>SUST Journal of Science and Technology</em>, 2026.</p>
         <dl class="finding">
-          <dt>Contribution</dt><dd>Combines newspaper reporting with police records to analyse Sylhet crime patterns, joining spatiotemporal clustering, recidivism analysis and forecasting.</dd>
-          <dt>Finding</dt><dd>Identifies temporal hotspots and near-term trends with direct public-safety implications for municipal planning.</dd>
+          <dt>Contribution</dt><dd>Combines newspaper reporting and police records to analyse Sylhet crime patterns using spatiotemporal clustering, recidivism analysis, forecasting, and 3D visualisation.</dd>
+          <dt>Finding</dt><dd>The study identifies temporal hotspots and near-term patterns relevant to local public-safety analysis.</dd>
         </dl>
       </div>
     </article>
   </div>
 </section>
-
 </main>
+
 <footer class="foot">
   <div class="wrap foot-grid">
     <div>
-      <p class="mono" style="color:var(--signal);margin-bottom:14px">Contact</p>
-      <p class="big">Open to lecturer positions, PhD and MSc supervision enquiries, and research collaboration.<br>
-      <a href="mailto:nhfahim18@gmail.com">nhfahim18@gmail.com</a></p>
+      <p class="mono foot-name">Md Nasiat Hasan Fahim</p>
+      <p class="foot-summary">Computer Science researcher working on machine learning for scientific problems.</p>
+      <p>Seeking Lecturer positions in Computer Science and MSc/PhD research opportunities. Open to research collaboration.</p>
+      <a href="mailto:nasiat.cse.sust@gmail.com">nasiat.cse.sust@gmail.com</a>
     </div>
     <div class="mono meta">
       <a href="https://github.com/nasiatfahim">GitHub</a><br>
-      <a href="https://www.linkedin.com/in/md-nasiat-hasan-fahim-2a3005289">LinkedIn</a><br>
-      <a href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf">CV (PDF)</a><br>
-      <span style="color:var(--ink-3)">Sylhet, Bangladesh</span>
+      <a href="https://www.linkedin.com/in/nasiat-fahim">LinkedIn</a><br>
+      <a href="https://www.kaggle.com/nasiatfahim">Kaggle</a><br>
+      <a href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf" download>CV PDF</a><br>
+      <span>Sylhet, Bangladesh</span>
     </div>
   </div>
 </footer>

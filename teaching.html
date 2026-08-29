@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Teaching — Md Nasiat Hasan Fahim</title>
-<meta name="description" content="Teaching statement, courses prepared to teach, and mentoring experience.">
+<meta name="description" content="Teaching philosophy, teaching areas, and undergraduate project interests of Md Nasiat Hasan Fahim.">
 <link rel="canonical" href="https://nasiatfahim.github.io/teaching.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Teaching — Md Nasiat Hasan Fahim">
-<meta property="og:description" content="Teaching statement, courses prepared to teach, evidence and supervision topics.">
+<meta property="og:description" content="Teaching philosophy, academic preparation, and areas for undergraduate project mentoring.">
 <meta property="og:url" content="https://nasiatfahim.github.io/teaching.html">
-<meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://nasiatfahim.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;450;500;600&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
@@ -24,74 +24,75 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="masthead">
   <div class="wrap">
-    <a class="brand" href="index.html">Nasiat&nbsp;Fahim</a>
+    <div class="brand-row">
+      <a class="brand" href="index.html">Nasiat&nbsp;Fahim</a>
+      <a class="mobile-pdf" href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf" download>Download CV</a>
+    </div>
     <nav class="nav" aria-label="Main">
       <a href="research.html">Research</a>
       <a href="publications.html">Publications</a>
       <a href="teaching.html" aria-current="page">Teaching</a>
       <a href="projects.html">Projects</a>
       <a href="cv.html">CV</a>
-      <a class="pdf" href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf">PDF&nbsp;&darr;</a>
+      <a class="pdf desktop-pdf" href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf" download>PDF&nbsp;&darr;</a>
     </nav>
   </div>
 </header>
+
 <main id="main">
-<section class="hero" style="padding-bottom:clamp(20px,3vw,32px)">
+<section class="hero interior-hero">
   <div class="wrap">
-    <p class="mono" style="color:var(--signal);margin-bottom:16px">Teaching</p>
-    <h1 style="font-size:clamp(2.1rem,5vw,3.6rem);margin-bottom:.4em">Teaching</h1>
-    <p class="lede" style="max-width:44ch">I am applying for lecturer positions in computer science. This page is what a hiring committee needs and a CV cannot carry.</p>
+    <p class="mono page-label">Teaching</p>
+    <h1>Teaching</h1>
+    <p class="lede">I want students to understand why a method works, implement it themselves, and recognise the conditions under which it fails.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><div><p class="mono">Statement</p><h2 class="h2">How I teach</h2></div></div>
+    <div class="section-head"><div><p class="mono">Teaching philosophy</p><h2 class="h2">Understanding before memorisation</h2></div></div>
     <div class="prose">
-      <!-- EDIT: this is a draft written from your CV. Rewrite it in your own voice
-           before publishing — a teaching statement must be genuinely yours. -->
-      <p class="first">I learned to program the way most of my future students will: by being wrong repeatedly, in public, against a clock. Fifteen hundred competitive-programming problems is mostly a record of failures, and the useful part of that record is knowing exactly where a beginner&rsquo;s understanding tends to break.</p>
-      <p>My first commitment is to <strong>make the failure visible</strong>. A student who cannot explain why their solution is <em>O(n&sup2;)</em> has not learned complexity, however well they recite the definition. I prefer to build a lecture around a wrong answer &mdash; a solution that passes the sample and fails the fourth test case &mdash; and work outward from why, because the diagnosis is the transferable skill and the correct code is not.</p>
-      <p>My second commitment is to <strong>teach from real data</strong>. My own research runs on Bangladeshi seismic records, Sentinel&#8209;1 imagery of the delta and protein sequences from local fish species, and I bring that material into teaching wherever a course allows it. A machine-learning class that only ever sees MNIST teaches students that data arrives clean, labelled and balanced. It does not.</p>
-      <p>My third commitment is to <strong>be honest about what models cannot do</strong>. My research is largely about the conditions under which a well-performing model quietly stops working. Students going into an industry that will ask them to deploy these systems should graduate able to ask that question unprompted.</p>
-      <p>Concretely, that means assessment weighted toward projects with real datasets and defended orally; office hours where I ask the student to explain the bug to me rather than the other way round; and course materials, slides and problem sets published openly on this site as I develop them.</p>
+      <p class="first">I learn best by building, testing, and asking why. I would use the same sequence in teaching: begin with a concrete problem, develop the idea behind the solution, implement it, and use the result to expose what the theory explains.</p>
+      <p>In programming and algorithms, incorrect solutions are valuable evidence. A program that passes simple examples but fails on a boundary case can reveal more about a student's mental model than a memorised definition. I would make those failures visible and guide students to diagnose them.</p>
+      <p>In machine learning, students should work with data that are incomplete, imbalanced, or locally relevant. Clean benchmark datasets are useful for introducing a method, but they should not hide the work required to evaluate a real system.</p>
+      <p>My goal is to adapt explanations to the student's current understanding, connect theory with implementation, and assess both the result and the reasoning used to reach it.</p>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><div><p class="mono">Courses</p><h2 class="h2">Prepared to teach</h2></div></div>
-    <div class="cols">
+    <div class="section-head"><div><p class="mono">Teaching areas</p><h2 class="h2">Courses I am prepared to teach</h2></div></div>
+    <div class="cols teaching-areas">
       <div>
-        <h4>Core &mdash; immediately</h4>
+        <h3>Primary teaching areas</h3>
         <ul>
-          <li>Structured Programming (C)</li>
-          <li>Object-Oriented Programming (C++, Java)</li>
+          <li>Structured Programming</li>
+          <li>Object-Oriented Programming</li>
           <li>Data Structures</li>
-          <li>Algorithm Design &amp; Analysis</li>
-          <li>Database Management Systems</li>
+          <li>Algorithm Design and Analysis</li>
+          <li>Database Systems</li>
           <li>Software Engineering</li>
+          <li>Operating Systems</li>
         </ul>
       </div>
       <div>
-        <h4>Specialist &mdash; from research</h4>
+        <h3>AI and machine learning</h3>
         <ul>
           <li>Machine Learning</li>
           <li>Deep Learning</li>
           <li>Computer Vision</li>
           <li>Natural Language Processing</li>
-          <li>Large Language Models &amp; LLM Systems</li>
-          <li>Cloud Computing (AWS)</li>
         </ul>
       </div>
       <div>
-        <h4>Would like to develop</h4>
+        <h3>Advanced and technical topics</h3>
         <ul>
-          <li>Explainable &amp; Trustworthy ML</li>
-          <li>Machine Learning for the Sciences</li>
-          <li>Geospatial Data Science</li>
-          <li>Competitive Programming (contest training)</li>
+          <li>Explainable AI</li>
+          <li>Scientific Machine Learning</li>
+          <li>GeoAI and Remote Sensing</li>
+          <li>Large Language Model Systems</li>
+          <li>Cloud Computing</li>
         </ul>
       </div>
     </div>
@@ -100,68 +101,64 @@
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><div><p class="mono">Evidence</p><h2 class="h2">Relevant experience</h2></div></div>
+    <div class="section-head"><div><p class="mono">Academic preparation</p><h2 class="h2">Experience relevant to teaching</h2></div></div>
     <div class="rows">
       <div class="row">
-        <p class="mono">2025 &ndash; 2026</p>
-        <p class="what">Research assistant, SUST<small>Under Prof. Dr. Ahsan Habib. Worked within a multi-author research group and co-authored a journal submission with five colleagues.</small></p>
-        <p class="mono who">Research</p>
-      </div>
-      <div class="row">
         <p class="mono">2022 &ndash; 2026</p>
-        <p class="what">Competitive programming<small>Codeforces Specialist (max 1431) &middot; CodeChef 3-star (max 1735) &middot; 1,500+ problems across five platforms &middot; two national inter-university onsite contests.</small></p>
+        <p class="what">Sustained competitive problem solving<small>Codeforces Specialist (maximum rating 1431), CodeChef 3-star (maximum rating 1735), 1,500+ problems across five platforms, and participation in two national inter-university onsite contests.</small></p>
         <p class="mono who">Algorithms</p>
       </div>
       <div class="row">
+        <p class="mono">2025 &ndash; 2026</p>
+        <p class="what">Research collaboration at SUST<small>Worked in a multi-author research group under Prof. Dr. Ahsan Habib, contributing analysis, visualisation, interpretation, and manuscript development.</small></p>
+        <p class="mono who">Research</p>
+      </div>
+      <div class="row">
         <p class="mono">2025</p>
-        <p class="what">AI fellowship, BRAC Tech &amp; SELP-RHRN<small>Selected fellowship cohort; delivered production backend systems to a brief, on a schedule, for the world&rsquo;s largest NGO.</small></p>
-        <p class="mono who">Industry</p>
+        <p class="what">Backend engineering in the BRAC Tech &amp; SELP-RHRN AI Fellowship<small>Translated technical requirements into a working backend, explained engineering decisions within a team, and delivered under project constraints.</small></p>
+        <p class="mono who">Engineering</p>
       </div>
       <div class="row">
         <p class="mono">2024 &ndash; 2025</p>
-        <p class="what">Team competitions<small>Six placed finishes including one championship, all as part of small teams under time pressure.</small></p>
+        <p class="what">Collaborative technical competitions<small>Six placed finishes, including one championship, through small-team problem solving under time constraints.</small></p>
         <p class="mono who">Teamwork</p>
       </div>
     </div>
-    <p class="mono" style="color:var(--ink-3);margin-top:24px;text-transform:none;letter-spacing:.02em;font-size:.74rem">
-      <!-- EDIT: add tutoring, TA duties, workshops, junior mentoring or contest coaching here.
-           Informal mentoring counts as teaching experience and committees look for it. -->
-      Course materials and problem sets will be published here as I develop them.
-    </p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><div><p class="mono">Supervision</p><h2 class="h2">Thesis topics I can supervise</h2></div></div>
+    <div class="section-head"><div><p class="mono">Undergraduate research &amp; project mentoring</p><h2 class="h2">Areas I would support as a lecturer</h2></div></div>
     <div class="prose">
-      <p>I would be glad to supervise undergraduate theses on applied machine learning, particularly where a student can work with locally relevant data rather than a downloaded benchmark. Some starting points:</p>
+      <p class="first">I would be interested in mentoring undergraduate research and project work that connects a clear computer-science question with a realistic dataset or working system.</p>
       <ul>
-        <li>Flood extent mapping over Bangladeshi rivers from Sentinel&#8209;1, and how far a model trained on one basin transfers to another</li>
-        <li>Seismic signal processing and magnitude estimation from the Bangladesh&ndash;India regional network</li>
-        <li>Protein sequence classification for fisheries, food authentication or biodiversity monitoring</li>
-        <li>Bengali NLP &mdash; regional dialect speech recognition, low-resource language modelling</li>
-        <li>Explainability audits: taking a deployed or published model and characterising where it fails</li>
-        <li>Retrieval-augmented systems over Bengali document collections</li>
+        <li>Applied machine learning and computer vision</li>
+        <li>Explainable and reliable AI</li>
+        <li>GeoAI and Earth observation</li>
+        <li>Scientific machine learning</li>
+        <li>Large language model applications</li>
+        <li>Intelligent web and backend systems</li>
       </ul>
-      <p>If you are a student interested in any of these, <a href="mailto:nhfahim18@gmail.com">write to me</a> with a paragraph on what you find interesting about it.</p>
     </div>
   </div>
 </section>
-
 </main>
+
 <footer class="foot">
   <div class="wrap foot-grid">
     <div>
-      <p class="mono" style="color:var(--signal);margin-bottom:14px">Contact</p>
-      <p class="big">Open to lecturer positions, PhD and MSc supervision enquiries, and research collaboration.<br>
-      <a href="mailto:nhfahim18@gmail.com">nhfahim18@gmail.com</a></p>
+      <p class="mono foot-name">Md Nasiat Hasan Fahim</p>
+      <p class="foot-summary">Computer Science researcher working on machine learning for scientific problems.</p>
+      <p>Seeking Lecturer positions in Computer Science and MSc/PhD research opportunities. Open to research collaboration.</p>
+      <a href="mailto:nasiat.cse.sust@gmail.com">nasiat.cse.sust@gmail.com</a>
     </div>
     <div class="mono meta">
       <a href="https://github.com/nasiatfahim">GitHub</a><br>
-      <a href="https://www.linkedin.com/in/md-nasiat-hasan-fahim-2a3005289">LinkedIn</a><br>
-      <a href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf">CV (PDF)</a><br>
-      <span style="color:var(--ink-3)">Sylhet, Bangladesh</span>
+      <a href="https://www.linkedin.com/in/nasiat-fahim">LinkedIn</a><br>
+      <a href="https://www.kaggle.com/nasiatfahim">Kaggle</a><br>
+      <a href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf" download>CV PDF</a><br>
+      <span>Sylhet, Bangladesh</span>
     </div>
   </div>
 </footer>

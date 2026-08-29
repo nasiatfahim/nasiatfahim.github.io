@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Projects — Md Nasiat Hasan Fahim</title>
-<meta name="description" content="Engineering projects: multimodal retrieval systems, computer vision pipelines and production backends.">
+<meta name="description" content="Selected machine-learning and software systems built by Md Nasiat Hasan Fahim.">
 <link rel="canonical" href="https://nasiatfahim.github.io/projects.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Projects — Md Nasiat Hasan Fahim">
-<meta property="og:description" content="Engineering systems: multimodal retrieval, computer-vision pipelines and production backends.">
+<meta property="og:description" content="Selected systems translating machine-learning and software ideas into working applications.">
 <meta property="og:url" content="https://nasiatfahim.github.io/projects.html">
-<meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://nasiatfahim.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;450;500;600&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
@@ -24,92 +24,109 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="masthead">
   <div class="wrap">
-    <a class="brand" href="index.html">Nasiat&nbsp;Fahim</a>
+    <div class="brand-row">
+      <a class="brand" href="index.html">Nasiat&nbsp;Fahim</a>
+      <a class="mobile-pdf" href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf" download>Download CV</a>
+    </div>
     <nav class="nav" aria-label="Main">
       <a href="research.html">Research</a>
       <a href="publications.html">Publications</a>
       <a href="teaching.html">Teaching</a>
       <a href="projects.html" aria-current="page">Projects</a>
       <a href="cv.html">CV</a>
-      <a class="pdf" href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf">PDF&nbsp;&darr;</a>
+      <a class="pdf desktop-pdf" href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf" download>PDF&nbsp;&darr;</a>
     </nav>
   </div>
 </header>
+
 <main id="main">
-<section class="hero" style="padding-bottom:clamp(20px,3vw,32px)">
+<section class="hero interior-hero">
   <div class="wrap">
-    <p class="mono" style="color:var(--signal);margin-bottom:16px">Projects</p>
-    <h1 style="font-size:clamp(2.1rem,5vw,3.6rem);margin-bottom:.4em">Systems I have built</h1>
-    <p class="lede" style="max-width:44ch">Research shows I can ask a question. These show I can ship the thing that answers it.</p>
+    <p class="mono page-label">Projects</p>
+    <h1>Systems I have built</h1>
+    <p class="lede">Selected systems demonstrating my experience translating machine-learning and software ideas into working applications.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="prose" style="max-width:70ch">
-      <p class="first">Research code and production code fail differently, and I think a researcher who has written both is better at each. These are engineering projects &mdash; built to run, be deployed and be handed to someone else &mdash; kept deliberately separate from the research pages.</p>
-    </div>
-  </div>
-</section>
+    <div class="section-head"><div><p class="mono">Selected projects</p><h2 class="h2">From problem to working system</h2></div></div>
 
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><div><p class="mono">Engineering</p><h2 class="h2">Selected projects</h2></div></div>
-
-    <article class="entry">
-      <div class="gutter"><p class="mono status">Personal</p><p class="mono dim">Full-stack</p></div>
+    <article class="entry" id="multimodal-search">
+      <div class="gutter"><p class="mono status">Personal</p><p class="mono dim">Full-stack AI</p></div>
       <div>
-        <h3>Multimodal AI search &amp; recommendation engine</h3>
-        <p class="question">Can a shopper find a product by describing it and showing a photograph of something similar, in the same query?</p>
-        <p>A full-stack e-commerce platform built around a hybrid retrieval microservice. OpenAI Vision produces embeddings for product imagery, ChromaDB serves nearest-neighbour search over combined text and image vectors, and a PostgreSQL-to-vector synchronisation pipeline keeps the index consistent with the catalogue as it changes &mdash; which is the part that is actually hard. Redis caches hot queries; the whole thing is containerised with Docker.</p>
-        <div class="tags"><span>FastAPI</span><span>OpenAI Vision</span><span>ChromaDB</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span></div>
-        <div class="actions"><a href="https://github.com/nasiatfahim">GitHub &rarr;</a></div>
+        <h3>Multimodal AI search and recommendation engine</h3>
+        <dl class="project-record">
+          <dt>Problem</dt><dd>Enable shoppers to search an e-commerce catalogue using text, an image, or both while keeping results aligned with the changing product database.</dd>
+          <dt>Contribution</dt><dd>I built the FastAPI retrieval service and the PostgreSQL-to-vector synchronisation pipeline, with Redis caching and containerised deployment.</dd>
+          <dt>Architecture</dt><dd>OpenAI vision capabilities interpret image queries, ChromaDB supports hybrid text/image retrieval, PostgreSQL stores catalogue data, and Redis caches repeated requests.</dd>
+          <dt>Technologies</dt><dd>FastAPI, OpenAI Vision, ChromaDB, PostgreSQL, Redis, Docker.</dd>
+          <dt>Outcome</dt><dd>A working full-stack search and recommendation system with synchronised relational and vector data.</dd>
+          <dt>Resources</dt><dd><a href="https://github.com/shifat71/350">GitHub repository</a></dd>
+        </dl>
       </div>
     </article>
 
-    <article class="entry">
+    <article class="entry" id="cowtrain">
       <div class="gutter"><p class="mono status">Personal</p><p class="mono dim">Computer vision</p></div>
       <div>
-        <h3>COWTRAIN &mdash; cattle weight estimation from photographs</h3>
-        <p class="question">Livestock is priced by weight, and a scale is expensive. Can a phone photograph do the job?</p>
-        <p>An end-to-end pipeline: YOLOv8 instance segmentation isolates the animal and a reference object of known size in the same frame, the pixel-to-metric scale is recovered from the reference, and a regression model maps the resulting morphometry to weight. Served behind a FastAPI backend. The reference-object trick is what makes it work from an uncalibrated camera at an unknown distance.</p>
-        <div class="tags"><span>YOLOv8</span><span>Instance segmentation</span><span>Regression</span><span>FastAPI</span></div>
+        <h3>COWTRAIN: cattle weight estimation from photographs</h3>
+        <dl class="project-record">
+          <dt>Problem</dt><dd>Estimate cattle weight from an ordinary photograph when a livestock scale is unavailable.</dd>
+          <dt>Contribution</dt><dd>I developed the end-to-end computer-vision and regression pipeline and served it through a FastAPI backend.</dd>
+          <dt>Architecture</dt><dd>YOLOv8 instance segmentation isolates the animal and a reference object; the reference provides image scale, and regression maps extracted morphometry to predicted weight.</dd>
+          <dt>Technologies</dt><dd>YOLOv8, instance segmentation, regression, FastAPI.</dd>
+          <dt>Outcome</dt><dd>A working image-to-weight prediction pipeline designed for photographs from an uncalibrated camera.</dd>
+        </dl>
       </div>
     </article>
 
-    <article class="entry">
-      <div class="gutter"><p class="mono status">Professional</p><p class="mono dim">BRAC<br>2025</p></div>
+    <article class="entry" id="brac-platform">
+      <div class="gutter"><p class="mono status">Professional</p><p class="mono dim">BRAC Tech &amp;<br>SELP-RHRN<br>2025</p></div>
       <div>
         <h3>Gamified social platform for BRAC</h3>
-        <p>Backend engineering during the BRAC Tech &amp; SELP-RHRN AI fellowship, on a platform addressing gender-discrimination attitudes. I built the FastAPI backend, multi-LLM pipelines over GPT&#8209;4o and Gemini serving real-time Bengali content &mdash; book and research-paper search with suggestions &mdash; and PostgreSQL JSONB schemas for semi-structured content, deployed as containerised microservices. Working Bengali-language LLM systems at NGO scale is a different problem from working English ones at demo scale.</p>
-        <div class="tags"><span>FastAPI</span><span>GPT-4o</span><span>Gemini</span><span>PostgreSQL JSONB</span><span>Docker</span><span>Bengali NLP</span></div>
+        <dl class="project-record">
+          <dt>Problem</dt><dd>Support a Bengali-language platform addressing gender-discrimination mindsets through interactive and research-informed content.</dd>
+          <dt>Contribution</dt><dd>I built the FastAPI backend, multi-LLM content pipelines, and PostgreSQL JSONB schemas.</dd>
+          <dt>Architecture</dt><dd>Containerised backend services used GPT-4o and Gemini for Bengali book and research-paper search and suggestions, with semi-structured content stored in PostgreSQL.</dd>
+          <dt>Technologies</dt><dd>FastAPI, GPT-4o, Gemini, PostgreSQL JSONB, Docker.</dd>
+          <dt>Outcome</dt><dd>A deployed backend developed during the BRAC Tech &amp; SELP-RHRN AI Fellowship.</dd>
+          <dt>Resources</dt><dd>Private professional project - source unavailable.</dd>
+        </dl>
       </div>
     </article>
 
-    <article class="entry">
-      <div class="gutter"><p class="mono status">Champion</p><p class="mono dim">Oxfam<br>hackathon</p></div>
+    <article class="entry" id="climate-reporting">
+      <div class="gutter"><p class="mono status">Champion</p><p class="mono dim">AI Meets Climate<br>Hackathon</p></div>
       <div>
         <h3>Real-time climate-reporting pipeline</h3>
-        <p>Winning entry at the AI Meets Climate hackathon: an ASR and NER pipeline turning spoken field reports into structured climate-incident records. Built and demonstrated inside the contest window.</p>
-        <div class="tags"><span>ASR</span><span>Named entity recognition</span><span>Pipeline</span></div>
+        <dl class="project-record">
+          <dt>Problem</dt><dd>Turn spoken field reports into structured climate-incident records quickly enough to support real-time reporting.</dd>
+          <dt>Contribution</dt><dd>Developed the pipeline as part of the winning team during the hackathon.</dd>
+          <dt>Architecture</dt><dd>Automatic speech recognition converts audio to text, and named-entity recognition extracts structured incident information.</dd>
+          <dt>Technologies</dt><dd>ASR, named-entity recognition, data pipelines.</dd>
+          <dt>Outcome</dt><dd>Champion, AI Meets Climate Hackathon, Oxfam.</dd>
+        </dl>
       </div>
     </article>
   </div>
 </section>
-
 </main>
+
 <footer class="foot">
   <div class="wrap foot-grid">
     <div>
-      <p class="mono" style="color:var(--signal);margin-bottom:14px">Contact</p>
-      <p class="big">Open to lecturer positions, PhD and MSc supervision enquiries, and research collaboration.<br>
-      <a href="mailto:nhfahim18@gmail.com">nhfahim18@gmail.com</a></p>
+      <p class="mono foot-name">Md Nasiat Hasan Fahim</p>
+      <p class="foot-summary">Computer Science researcher working on machine learning for scientific problems.</p>
+      <p>Seeking Lecturer positions in Computer Science and MSc/PhD research opportunities. Open to research collaboration.</p>
+      <a href="mailto:nasiat.cse.sust@gmail.com">nasiat.cse.sust@gmail.com</a>
     </div>
     <div class="mono meta">
       <a href="https://github.com/nasiatfahim">GitHub</a><br>
-      <a href="https://www.linkedin.com/in/md-nasiat-hasan-fahim-2a3005289">LinkedIn</a><br>
-      <a href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf">CV (PDF)</a><br>
-      <span style="color:var(--ink-3)">Sylhet, Bangladesh</span>
+      <a href="https://www.linkedin.com/in/nasiat-fahim">LinkedIn</a><br>
+      <a href="https://www.kaggle.com/nasiatfahim">Kaggle</a><br>
+      <a href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf" download>CV PDF</a><br>
+      <span>Sylhet, Bangladesh</span>
     </div>
   </div>
 </footer>
