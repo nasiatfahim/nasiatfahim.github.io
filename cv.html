@@ -24,6 +24,67 @@
 <meta name="theme-color" content="#F0F2F0" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0E1214" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="assets/site.css">
+<style>
+  .referee-intro {
+    margin: 0 0 1.5rem;
+    max-width: 52rem;
+    color: rgba(14, 18, 20, 0.76);
+  }
+  .referee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    align-items: stretch;
+  }
+  .referee-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    min-height: 100%;
+    padding: 1.2rem 1.1rem;
+    border: 1px solid rgba(14, 18, 20, 0.12);
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 8px 18px rgba(11, 99, 87, 0.04);
+  }
+  .referee-card h3 {
+    margin: 0;
+    font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+    line-height: 1.25;
+  }
+  .referee-role,
+  .referee-affiliation,
+  .referee-relation,
+  .referee-card p {
+    margin: 0;
+  }
+  .referee-role {
+    color: rgba(14, 18, 20, 0.8);
+    font-weight: 600;
+  }
+  .referee-affiliation {
+    color: rgba(14, 18, 20, 0.72);
+    line-height: 1.5;
+  }
+  .referee-relation {
+    font-weight: 600;
+    color: #0B6357;
+  }
+  .referee-links {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.5rem;
+    font-size: 0.9rem;
+  }
+  .referee-links a {
+    color: #0B6357;
+  }
+  @media (max-width: 760px) {
+    .referee-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -212,6 +273,53 @@
     <div class="download-callout">
       <p>For the concise application version with complete dates and contact details:</p>
       <a href="assets/Md-Nasiat-Hasan-Fahim-CV.pdf" download>Download CV (PDF) &darr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="section dense">
+  <div class="wrap">
+    <div class="section-head"><div><h2 class="mono">Academic Referees</h2></div></div>
+    <p class="referee-intro">Faculty members who can comment on my academic preparation, research ability, and collaborative work.</p>
+    <div class="referee-grid">
+      <article class="referee-card">
+        <h3>Mohammad Shahidur Rahman, PhD</h3>
+        <p class="referee-role">Professor</p>
+        <p class="referee-affiliation">Department of Computer Science &amp; Engineering<br>Shahjalal University of Science &amp; Technology</p>
+        <p class="referee-relation">Undergraduate Thesis Supervisor &amp; Course Instructor</p>
+        <p>Supervised my undergraduate thesis and taught me during my undergraduate studies.</p>
+        <div class="referee-links">
+          <a href="mailto:rahmanms@sust.edu">rahmanms@sust.edu</a>
+          <span>&middot;</span>
+          <a href="https://www.sust.edu/departments/cse/faculty/rahmanms@sust.edu" target="_blank" rel="noopener noreferrer">Faculty Profile ↗</a>
+        </div>
+      </article>
+
+      <article class="referee-card">
+        <h3>Dr. Ahsan Habib</h3>
+        <p class="referee-role">Associate Professor</p>
+        <p class="referee-affiliation">Institute of Information and Communication Technology (IICT)<br>Shahjalal University of Science &amp; Technology</p>
+        <p class="referee-relation">Research Assistant Supervisor</p>
+        <p>Supervised my research assistant work on spatiotemporal crime-pattern analysis and forecasting.</p>
+        <div class="referee-links">
+          <a href="mailto:ahabib-iict@sust.edu">ahabib-iict@sust.edu</a>
+          <span>&middot;</span>
+          <a href="https://www.sust.edu/institutes/iict/faculty/ahabib-iict@sust.edu" target="_blank" rel="noopener noreferrer">Faculty Profile ↗</a>
+        </div>
+      </article>
+
+      <article class="referee-card">
+        <h3>Dr. Md Forhad Rabbi, SMIEEE</h3>
+        <p class="referee-role">Professor &amp; Head</p>
+        <p class="referee-affiliation">Department of Computer Science &amp; Engineering<br>Shahjalal University of Science &amp; Technology</p>
+        <p class="referee-relation">Research Collaborator &amp; Course Instructor</p>
+        <p>Collaborating with me on research involving LLMs and agentic systems for industrial use cases; he also taught me during my undergraduate studies.</p>
+        <div class="referee-links">
+          <a href="mailto:frabbi-cse@sust.edu">frabbi-cse@sust.edu</a>
+          <span>&middot;</span>
+          <a href="https://www.sust.edu/departments/cse/faculty/frabbi-cse@sust.edu" target="_blank" rel="noopener noreferrer">Faculty Profile ↗</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
