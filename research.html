@@ -57,9 +57,9 @@
   <div class="wrap">
     <div class="section-head"><div><p class="mono">Research vision</p><h2 class="h2">Reliability beyond the training distribution</h2></div></div>
     <div class="prose">
-      <p class="first">Scientific machine-learning systems rarely receive data that perfectly resembles their training set. Sensors change, regions differ, labels remain limited, and biological or physical regimes can shift the underlying distribution.</p>
-      <p>High performance in distribution therefore does not guarantee useful behaviour elsewhere. I study generalisation failure as a scientific object: which conditions cause it, whether uncertainty or attribution can expose it, and how adaptation can improve reliability without hiding new weaknesses.</p>
-      <p>Protein sequences, satellite radar, and seismic waveforms provide different tests of this idea. Across all three, my goal is to build models whose predictions can be evaluated together with the conditions under which they should be believed.</p>
+      <p class="first">Scientific machine-learning models often encounter data that differ from their training data. Sensors change, geographic regions differ, biological conditions vary, and labelled data are often limited.</p>
+      <p>My research studies how these differences affect model performance and how failures can be detected or reduced. I am particularly interested in generalisation, explainability, uncertainty, and efficient model adaptation.</p>
+      <p>I explore these questions using protein sequences, satellite radar, and seismic waveforms.</p>
     </div>
   </div>
 </section>
@@ -73,13 +73,13 @@
         <h3>Adapting protein language models to thermophile sequence space</h3>
         <dl class="research-record">
           <dt>Research question</dt>
-          <dd>What does a protein language model lose by averaging across organisms with very different environmental adaptations?</dd>
+          <dd>How well can a general protein language model represent proteins adapted to extreme environments?</dd>
           <dt>Challenge</dt>
-          <dd>Large protein models mix many lifestyles and thermal regimes into one training distribution. Apparent improvements can also come from near-duplicate sequences rather than genuine adaptation.</dd>
+          <dd>Protein language models are trained on proteins from organisms living under very different environmental conditions. Apparent improvements can also come from near-duplicate sequences rather than genuine adaptation.</dd>
           <dt>Approach</dt>
           <dd>I adapt ProGen2 using LoRA-based supervised fine-tuning, DPO, and KTO under matched compute budgets and homology-controlled evaluation.</dd>
           <dt>Contribution</dt>
-          <dd>My work compares likelihood and preference objectives directly and examines their distinct trade-offs instead of treating all adaptation objectives as equivalent.</dd>
+          <dd>I compare likelihood-based and preference-based adaptation methods under the same compute and evaluation conditions to understand their different strengths and trade-offs.</dd>
           <dt>Current direction</dt>
           <dd>I use attribution methods to study which residue, charge, and sequence patterns the adapted models associate with thermophile biology.</dd>
           <dt>Resources</dt>
@@ -106,9 +106,9 @@
           <dt>Approach</dt>
           <dd>I train and compare cross-regional segmentation models, evaluate geographic and biome shift systematically, and inspect model behaviour with explainability methods.</dd>
           <dt>Contribution</dt>
-          <dd>My work centres the conditions of failure rather than only mean segmentation performance, connecting geographic variation with prediction reliability.</dd>
+          <dd>I focus on identifying the geographic conditions under which segmentation performance degrades, rather than reporting only average accuracy.</dd>
           <dt>Current direction</dt>
-          <dd>I am developing a controlled evaluation framework for cross-region generalisation, interpretability, and reliable Sentinel-1-only water mapping.</dd>
+          <dd>I am developing a controlled evaluation setup for testing cross-region performance and using explainability to understand where Sentinel-1-only models fail.</dd>
           <dt>Resources</dt>
           <dd>Code and data are not yet publicly released.</dd>
         </dl>
@@ -135,7 +135,7 @@
           <dt>Contribution</dt>
           <dd>The study established a regional evaluation dataset and a six-model comparison. The Transformer reached 76.23% accuracy, 81.56% adaptive accuracy, and 4.8 ms inference latency.</dd>
           <dt>Current direction</dt>
-          <dd>I am extending the work toward cross-region transfer and relationships between early waveforms, shaking intensity, radiated energy, and source properties, with explainability-based checks.</dd>
+          <dd>I am extending the work to evaluate cross-region transfer and to study what early P-wave features reveal about shaking, radiated energy, and source properties. Explainability methods are used to examine which waveform features drive the predictions.</dd>
           <dt>Resources</dt>
           <dd><a href="https://doi.org/10.1109/ICCIT68739.2025.11489542">Peer-reviewed paper</a> &middot; <a href="publications.html#eew">Publication details</a></dd>
         </dl>
@@ -169,9 +169,8 @@
   <div class="wrap">
     <div class="section-head"><div><p class="mono">Future direction</p><h2 class="h2">Where I want to take this</h2></div></div>
     <div class="prose">
-      <p class="first">I want to move from simply optimising predictive performance toward understanding when, where, and why machine-learning systems fail under distribution shift.</p>
-      <p>My emerging direction combines domain generalisation, robustness, uncertainty, calibration, explainability, adaptation, model self-assessment, and efficient scientific foundation models. I am especially interested in methods that report not only a prediction, but also evidence about whether that prediction should be trusted.</p>
-      <p>I want to test these ideas on scientific domains where the ground truth is physical and failure matters outside the benchmark, while keeping the methods broad enough to transfer across biological, Earth, and engineering data.</p>
+      <p class="first">I want to develop models that can recognise when they are outside their training conditions, estimate how reliable their predictions are, and adapt efficiently to new scientific domains.</p>
+      <p>This direction connects my interests in generalisation, uncertainty, explainability, and scientific foundation models.</p>
     </div>
   </div>
 </section>
