@@ -470,6 +470,75 @@ small { font-size: inherit; }
 .secondary-links { margin-top: 12px; }
 .secondary-links a { color: var(--ink-3); }
 
+.referee-intro {
+  margin: 0 0 1.5rem;
+  max-width: 52rem;
+  color: var(--ink-2);
+}
+
+.referee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.referee-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  min-height: 100%;
+  padding: 1.2rem 1.1rem;
+  border: 1px solid var(--rule);
+  background: var(--paper-2);
+}
+
+.referee-card h3 {
+  margin: 0;
+  font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+  line-height: 1.25;
+}
+
+.referee-role,
+.referee-affiliation,
+.referee-relation,
+.referee-card p {
+  margin: 0;
+}
+
+.referee-role {
+  color: var(--ink-2);
+  font-weight: 600;
+}
+
+.referee-affiliation {
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+
+.referee-relation {
+  font-weight: 600;
+  color: var(--signal);
+}
+
+.referee-links {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+  font-size: 0.9rem;
+}
+
+.referee-links a {
+  color: var(--signal);
+}
+
+@media (max-width: 760px) {
+  .referee-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Link rail under the hero — mono, separated by hairlines. */
 .links {
   display: flex;
